@@ -1,0 +1,19 @@
+table, td {
+    border: 1px solid black;
+}
+
+td {
+    padding: 5px;
+}
+
+button, input, p {
+    margin-top: 20px;
+}
+
+button:hover, .btns:hover {
+    background-color: lightblue;
+}
+
+button:active {
+    background-color: lightcoral;
+}
