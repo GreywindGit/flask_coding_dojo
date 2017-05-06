@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Request Counter - Statistics</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>Method</td>
+                <td>Count</td>
+            </tr>
+            {% for key in stats.keys() %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ stats[key] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
