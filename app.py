@@ -1,4 +1,5 @@
 from flask import Flask, render_template, redirect
+import helper
 app = Flask(__name__)
 
 
@@ -33,7 +34,8 @@ def del_counter():
 
 @app.route('/statistics')
 def statistics():
-    return render_template('statistics.html')
+    stats = helper.get_stats('request_counts.txt')
+    return render_template('statistics.html', stats=stats)
 
 if __name__ == "__main__":
     app.run(debug=True)
